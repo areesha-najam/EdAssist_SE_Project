@@ -38,6 +38,21 @@
 			cursor: pointer;
 		}
 
+		.button_help {
+			background-color: #bf6fcf;
+			/* Green */
+			margin-bottom: 30px;
+			color: rgb(8, 8, 8);
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 15px;
+			border-radius: 15px;
+			transition: all 0.5s;
+			cursor: pointer;
+		}
+
 		.button span:after {
 			content: '\00bb';
 			position: absolute;
@@ -79,7 +94,7 @@
 			<br><br>
 		</div>
 		<div>
-			
+
 			<input type="date" data-date-inline-picker="true" />
 			<br>
 			<br>
@@ -94,8 +109,33 @@
 			<br>
 			<br>
 			<a class="button"><span>Meet Us</span></a>
-			
+			<br>
+			<br>
 		</div>
+		<div>
+			<dialog id="myFirstDialog" style="width:50%;background-color:#a37fa7;border:1px dotted black;">
+				<p><q>Hello, welcome to EdAssist! Please fill in the date you want to meet the teacher (shown above).
+						Then please select the slots from the drop-down list labeled "Choose slot". Next, click
+						"confirm". If the teacher accepts the selected slot and no conflict is found then you will
+						receive a confirmation email, else you will be sent an email asking you to reschedule.
+						Keep an eye on the email. Now you are good to go and meet us !
+					</q> </p>
+				<button id="hide">Close</button>
+			</dialog>
+			<a id="show" class="button_help"><span>Help</span></a>
+		</div>
+		<!-- JavaScript to provide the "Show/Close" functionality -->
+		<script type="text/JavaScript">
+			(function() {    
+				var dialog = document.getElementById('myFirstDialog');    
+				document.getElementById('show').onclick = function() {    
+					dialog.show();    
+				};    
+				document.getElementById('hide').onclick = function() {    
+					dialog.close();    
+				};    
+			})();   
+			</script>
 </body>
 
 </html>
