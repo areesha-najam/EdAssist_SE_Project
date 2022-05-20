@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Appointment</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+
+	<style>
+		.center {
+			text-align: center;
+			text-decoration: underline;
+			font-family: Arial, Helvetica, sans-serif;
+
+
+		}
+
+		.button {
+			background-color: #bf6fcf;
+			/* Green */
+			margin-bottom: 30px;
+
+			border: none;
+			color: rgb(8, 8, 8);
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 15px;
+			border-radius: 15px;
+			transition: all 0.5s;
+			cursor: pointer;
+		}
+
+		.button_help {
+			background-color: #bf6fcf;
+			/* Green */
+			margin-bottom: 30px;
+			color: rgb(8, 8, 8);
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 15px;
+			border-radius: 15px;
+			transition: all 0.5s;
+			cursor: pointer;
+		}
+
+		.button span:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+
+
+
+		.button:hover {
+			background-color: #7c1c80
+		}
+
+		input[type="text"] {
+			font-family: Arial, Helvetica, sans-serif;
+
+			font-size: 30px;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<header>
+		<div class="center">
+			<h2 text-decoration: underline;> Meet the teacher here.</h2>
+			<br>
+			<br> <br>
+		</div>
+	</header>
+
+	<div class="center">
+		<div class="inputs">
+			<input type="text" placeholder="Washington">
+			<br>
+			<br><br>
+		</div>
+		<div>
+
+			<input type="date" data-date-inline-picker="true" />
+			<br>
+			<br>
+			<br>
+
+			<select>
+				<option value="actual value 1">Choose slot</option>
+				<option value="actual value 2">Slot 2</option>
+				<option value="actual value 3">slot 3</option>
+			</select>
+			<br>
+			<br>
+			<br>
+			<a class="button"><span>Meet Us</span></a>
+			<br>
+			<br>
+		</div>
+		<div>
+			<dialog id="myFirstDialog" style="width:50%;background-color:#a37fa7;border:1px dotted black;">
+				<p><q>Hello, welcome to EdAssist! Please fill in the date you want to meet the teacher (shown above).
+						Then please select the slots from the drop-down list labeled "Choose slot". Next, click
+						"confirm". If the teacher accepts the selected slot and no conflict is found then you will
+						receive a confirmation email, else you will be sent an email asking you to reschedule.
+						Keep an eye on the email. Now you are good to go and meet us !
+					</q> </p>
+				<button id="hide">Close</button>
+			</dialog>
+			<a id="show" class="button_help"><span>Help</span></a>
+		</div>
+		<!-- JavaScript to provide the "Show/Close" functionality -->
+		<script type="text/JavaScript">
+			(function() {    
+				var dialog = document.getElementById('myFirstDialog');    
+				document.getElementById('show').onclick = function() {    
+					dialog.show();    
+				};    
+				document.getElementById('hide').onclick = function() {    
+					dialog.close();    
+				};    
+			})();   
+			</script>
+</body>
+
+</html>

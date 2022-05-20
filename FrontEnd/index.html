@@ -1,48 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>EdAssist Login Page</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>EdAssist Login Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
-
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+	<script defer src="login-page.js"></script>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div class="box-form">
-	<div class="left">
-		<div class="overlay">
-		<h1>EdAssist</h1>
-		<p>Making PTM scheduling easier so that students can excel in their studies.</p>
+	<!-- partial:index.partial.html -->
+	<div class="box-form">
+		<div class="left">
+			<div class="overlay">
+				<h1>EdAssist</h1>
+				<p>Making PTM scheduling easier so that students can excel in their studies.</p>
+			</div>
 		</div>
-	</div>
-	
+
 		<div class="right">
-		<h3>Login to Your Account</h3>
-		
-		<div class="inputs">
-			<input type="text" placeholder="user name">
-			<br>
-			<input type="password" placeholder="password">
+			<h3>Login to Your Account</h3>
+
+			<div class="inputs">
+
+				<body>
+					<main id="main-holder">
+						<h1 id="login-header">Login</h1>
+
+						<div id="login-error-msg-holder">
+							<p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or
+									password</span></p>
+						</div>
+
+						<form id="login-form">
+							<input type="text" name="username" id="username-field" class="login-form-field"
+								placeholder="Username">
+							<input type="password" name="password" id="password-field" class="login-form-field"
+								placeholder="Password">
+							<input type="submit" value="Login" id="login-form-submit">
+						</form>
+
+					</main>
+				</body>
+				<label>
+					<input type="checkbox" name="item" checked />
+					<span class="text-checkbox">Remember me</span>
+				</label>
+				<p><a href="forget.html">forget password?</a></p>
+			</div>
+			<!-- <br>
+				<input type="submit" value="Login" id="login-form-submit"> -->
 		</div>
-			<br><br>
-			
-		<div class="remember-me--forget-password">
-				<!-- Angular -->
-	<label>
-		<input type="checkbox" name="item" checked/>
-		<span class="text-checkbox">Remember me</span>
-	</label>
-			<p><a href="forget.html">forget password?</a></p>
-		</div>
-			<br>
-			<a href="dashboard.html" target="submit"><button>Log In</button></a>
+
 	</div>
-	
-</div>
-<!-- partial -->
-  
+	<!-- partial -->
+
+
 </body>
+
 </html>
